@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+    tools{
+	 maven 'maven'
+	}
+    stages {
+        stage("git") {
+            steps {
+                echo "git clone"
+                git branch: 'main', url: 'https://github.com/NagaParameswaraReddy/Jenkins_CI-CD.git'
+            }
+        }
+        
+        stage("maven build") {
+            steps {
+                echo "build maven"
+                sh 'mvn clean install'
+            }
+        }
+
+        stage("deploy to tomcat") {
+            steps {
+                echo "deploy to tomcat"
+                // Add your deployment steps here
+                deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://3.89.249.248:8076/')], contextPath: 'vsdc', war: '**/*.war'
+            }
+        }
+    }
+}
