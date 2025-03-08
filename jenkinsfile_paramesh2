@@ -1,0 +1,47 @@
+pipeline {
+    agent any
+
+    tools {
+        maven 'maven'
+    }
+
+    stages {
+        stage('Git Clone') {
+            steps {
+                echo 'Cloning repository from GitHub'
+                git branch: 'main', url: 'https://github.com/NagaParameswaraReddy/Jenkins_CI-CD.git'
+            }
+        }
+
+        stage('Maven Build') {
+            steps {
+                echo 'Building project with Maven'
+                sh 'mvn clean install'
+            }
+        }
+
+        stage('SonarQube Analysis') {
+            steps {
+                echo 'Running SonarQube Code Analysis'
+                sh '''
+                mvn sonar:sonar \
+                    -Dsonar.host.url=http://98.80.9.214:8096 \
+                    -Dsonar.login=squ_4cf7b5f82b8048029d6318c9a2190faa52fed6b2
+                '''
+            }
+        }
+
+        stage('Tomcat Deployment') {
+            steps {
+                echo 'Deploying application to Tomcat Server'
+                deploy adapters: [
+                    tomcat9(
+                        credentialsId: 'tomcat', 
+                        path: '', 
+                        url: 'http://3.94.168.120:8080/'
+                    )
+                ], contextPath: 'tomcat', war: '**/*.war'
+            }
+        }
+    }
+}
