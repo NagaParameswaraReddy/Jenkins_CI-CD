@@ -1,23 +1,23 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fbpod
+  name: fbdeploy
   labels:
     app: facebook
-    env: lab
-    version: fb-v1
 spec:
   selector:
     matchLabels:
-      app: facebook
-  replicas: 3
+      app: facebook 
+  replicas: 2 
   template:
     metadata:
       name: fbpod
       labels:
         app: facebook
-        env: lab
     spec:
       containers:
         - name: fbcont
-          image: nagaparameswarareddy/mydevops:tomcatserver
+          image: devopshubg333/batch14:5
+          ports:
+            - containerPort: 8080
