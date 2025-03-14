@@ -2,23 +2,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fbdeploy
+  name: voting-app-deploy
   labels:
-    app: facebook
+    name: voting-app-deploy
+    app: demo-voting-app
 spec:
   selector:
     matchLabels:
-      app: facebook 
-  replicas: 2 
+      app: demo-voting-app
+  replicas: 2
   template:
     metadata:
-      name: fbpod
+      name: voting-app-pod
       labels:
-        app: facebook
+        name: voting-app-pod
+        app: demo-voting-app
     spec:
       containers:
-        - name: fbcont
-          image: devopshubg333/batch14:5
+        - name: voting-app
+          image: dockersamples/examplevotingapp_vote
           ports:
-            - containerPort: 8080
-
+            - containerPort: 80
