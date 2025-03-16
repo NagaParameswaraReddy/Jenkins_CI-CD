@@ -1,14 +1,14 @@
 {
   "SchemaVersion": 2,
-  "CreatedAt": "2025-03-16T22:10:21.260685716Z",
-  "ArtifactName": "nagaparameswarareddy/mydevops:13",
+  "CreatedAt": "2025-03-16T22:49:22.87999913Z",
+  "ArtifactName": "nagaparameswarareddy/mydevops:14",
   "ArtifactType": "container_image",
   "Metadata": {
     "OS": {
       "Family": "ubuntu",
       "Name": "24.04"
     },
-    "ImageID": "sha256:a3941cce07cdc5df6c5604b366ec3352ceaa8da2e992a307c2cafa130ca99f9a",
+    "ImageID": "sha256:e772b00c985f8f4f5e20d05bfec8a9bfb8b10d558fd3c8ac6a679e7b5fc5704d",
     "DiffIDs": [
       "sha256:4b7c01ed0534d4f9be9cf97d068da1598c6c20b26cb6134fad066defdb6d541d",
       "sha256:3359bc3d7a6a1f94c063d743f3ebd025e299dfbbbb1d48afe18a90e4d5e1f36f",
@@ -20,15 +20,15 @@
       "sha256:6fbdf02a6a33fb7e6564c9d0d4f879d3845c91f60805babfe73104e1e0969def",
       "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
       "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
-      "sha256:10569bb6f879bf4135756837f9a5685292603e42e8cb1c29cb6eac0c55ba816b",
-      "sha256:15934590c1c2d54df8e26c6ceb23cae6ecb03d5e9273dda8d8ddc7049a58a1da"
+      "sha256:3f2ab869f752b46f250e28b1bda542f2c963c27aa832bf73a4b06a72ae5f5758",
+      "sha256:762a9c39205044c88ec4eaaaf5ef7fa2158fe3c1e9524673855a684d09350db9"
     ],
     "RepoTags": [
-      "nagaparameswarareddy/mydevops:13"
+      "nagaparameswarareddy/mydevops:14"
     ],
     "ImageConfig": {
       "architecture": "amd64",
-      "created": "2025-03-16T22:10:14.155640929Z",
+      "created": "2025-03-16T22:49:15.700244971Z",
       "history": [
         {
           "created": "2025-01-27T04:14:00Z",
@@ -201,17 +201,17 @@
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-03-16T22:10:13Z",
+          "created": "2025-03-16T22:49:15Z",
           "created_by": "COPY /opt/mindcircuit14/target/*.war . # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-03-16T22:10:14Z",
+          "created": "2025-03-16T22:49:15Z",
           "created_by": "RUN /bin/sh -c rm -rf ROOT \u0026\u0026 mv *.war ROOT.war # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-03-16T22:10:14Z",
+          "created": "2025-03-16T22:49:15Z",
           "created_by": "EXPOSE map[8080/tcp:{}]",
           "comment": "buildkit.dockerfile.v0",
           "empty_layer": true
@@ -231,8 +231,8 @@
           "sha256:6fbdf02a6a33fb7e6564c9d0d4f879d3845c91f60805babfe73104e1e0969def",
           "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
           "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
-          "sha256:10569bb6f879bf4135756837f9a5685292603e42e8cb1c29cb6eac0c55ba816b",
-          "sha256:15934590c1c2d54df8e26c6ceb23cae6ecb03d5e9273dda8d8ddc7049a58a1da"
+          "sha256:3f2ab869f752b46f250e28b1bda542f2c963c27aa832bf73a4b06a72ae5f5758",
+          "sha256:762a9c39205044c88ec4eaaaf5ef7fa2158fe3c1e9524673855a684d09350db9"
         ]
       },
       "config": {
@@ -267,7 +267,7 @@
   },
   "Results": [
     {
-      "Target": "nagaparameswarareddy/mydevops:13 (ubuntu 24.04)",
+      "Target": "nagaparameswarareddy/mydevops:14 (ubuntu 24.04)",
       "Class": "os-pkgs",
       "Type": "ubuntu",
       "Vulnerabilities": [

@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
         - name: fbcont
-          image: nagaparameswarareddy/mydevops:13
+          image: nagaparameswarareddy/mydevops:14
           ports:
             - containerPort: 8080
